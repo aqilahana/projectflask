@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Selamat Datang</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url("{{url_for('static', filename='IMG_6049.jpg')}}");
+            background-size: cover;
+            background-position: center; 
+            color: #fff;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5); 
+            height: 100vh; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: rgb(249, 209, 209);
+            font-size: 36px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #d88b8b;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgb(246, 127, 48);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <h1>Selamat Datang!</h1>
+        <div class="container">
+            <a href="/profile" class="button">Profile</a>
+            <a href="/cv" class="button">CV</a>
+            <a href="/cat" class="button">My Cats</a>
+            <a href="/artikel" class="button">Article</a>
+            <a href="/fibonacci" class="button">Fibonacci</a>
+            <a href="/csvtojson" class="button">Convert CSV to Json</a>
+            <a href="/post" class="button">POST</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffd3d3;
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 40px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.664);
+        }
+
+        img {
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(242, 163, 163, 0.5);
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 24px; 
+            margin: 20px 0;
+            color: #232323;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 32px;
+            margin-top: 20px;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #d88b8b;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgb(246, 127, 48);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="button">Halaman Utama</a>
+        <!-- <a href="/profile" class="button">Profile</a> -->
+        <a href="/cv" class="button">CV</a>
+        <a href="/cat" class="button">My Cats</a>
+        <a href="/artikel" class="button">Article</a>
+        <a href="/fibonacci" class="button">Fibonacci</a>
+        <a href="/csvtojson" class="button">Convert CSV to Json</a>
+        <a href="/post" class="button">POST</a>
+    </div>
+
+    <h1>My Profile</h1>
+    <img src="{{ url_for('static', filename='foto.jpg') }}" alt="Profile Photo" width="150" height="200">
+    <p>Hi! My name is Aqila Hana Winanggoro. People usually call me Hana</p>
+    <p>My hobby is listening to music</p>
+</body>
+</html>

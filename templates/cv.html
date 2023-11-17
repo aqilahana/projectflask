@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffd3d3;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+
+        .profile-img {
+            width: 200px;
+            height: 300px;
+            border: 2px solid #ffffff;
+            margin: 20px auto;
+            display: block;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 10px;
+            color: #333;
+            text-align: left;
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+            color: #555;
+            text-align: left;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+            color: #333;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #ccc;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+            color: #333;
+            text-align: left;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #d88b8b;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgb(246, 127, 48);
+        }
+    </style>
+</head>
+
+<div class="container">
+    <a href="/" class="button">Halaman Utama</a>
+    <a href="/profile" class="button">Profile</a>
+    <!-- <a href="/cv" class="button">CV</a> -->
+    <a href="/cat" class="button">My Cats</a>
+    <a href="/artikel" class="button">Article</a>
+    <a href="/fibonacci" class="button">Fibonacci</a>
+    <a href="/csvtojson" class="button">Convert CSV to Json</a>
+    <a href="/post" class="button">POST</a>
+</div>
+    <div class="container">
+        <h1>Curriculum Vitae</h1>
+
+        <div align="center">
+            <img src="{{ url_for('static', filename='DSC00562.jpg') }}" alt="Profile Picture" class="profile-img">
+        </div>
+
+        <h2>Data Diri</h2>
+        <p><strong>Nama:</strong> Aqila Hana Winanggoro</p>
+        <p><strong>Email:</strong> aqilahanaw@gmail.com</p>
+        <p><strong>Alamat:</strong> Surabaya</p>
+
+        <h2>Deskripsi Diri</h2>
+        <p>
+            Saya merupakan seorang mahasiswi semester 3 di Universitas Airlangga jurusan Teknologi Sains Data. Memiliki
+            kemampuan berhitung yang baik, serta dapat bekerjasama dalam tim membuat memiliki beberapa pengalaman
+            berorganisasi serta kepanitiaan. Di masa depan saya ingin bekerja sebagai data scientist dan memberikan
+            kontribusi besar pada kemajuan ilmu pengetahuan dan teknologi di Indonesia.
+        </p>
+
+        <h2>Pendidikan</h2>
+        <P><strong>IPA| SMA Al Muslim | 2019 - 2022</strong></P>
+        <ul>
+            <li>Menjadi perwakilan sekolah pada KSK bidang Informatika dan Matematika</li>
+            <li>Mendapat ranking 1 paralel untuk jurusan IPA</li>
+            <li>Membuat karya tulis ilmiah berjudul Alat Peraga Bidang Miring</li>
+        </ul>
+
+        <P><strong>Teknologi Sains Data| Universitas Airlangga | 2022 - sekarang</strong></P>
+        <ul>
+            <li>Bertanggung jawab menjadi humas dalam penyelenggaraan acara angkatan</li>
+        </ul>
+
+        <h2>Pengalaman</h2>
+        <P><strong>Bendahara| Panitia Buku Tahunan Sekolah | Agustus 2021 - Juni 2022</strong></P>
+        <ul>
+            <li>Membuat transparansi dana</li>
+            <li>Mengatur dan mengelola dana yang masuk</li>
+        </ul>
+        <P><strong>Pelatih| Melgi's Club Taekwondo | Oktober 2021 - Juli 2022</strong></P>
+        <ul>
+            <li>Melatih dan membuat konsep latihan Taekwondo</li>
+        </ul>
+        <P><strong>Staff| Kementerian Seni dan Olahraga BEM FTMM | Maret 2023 - sekarang</strong></P>
+        <ul>
+            <li>Membuat konten mengenai berita dan prestasi mahasiswa di bidang seni dan olahraga</li>
+            <li>Bertanggung jawab atas uang kas kementerian</li>
+        </ul>
+        <P><strong>Volunteer| TSD Mengajar | Mei - Juni 2023</strong></P>
+        <ul>
+            <li>Mengajar anak-anak TK hingga SD di sebuah pemukiman</li>
+        </ul>
+        <P><strong>Intern| PT Global Bayu Prima | Juni - Agustus 2023</strong></P>
+        <ul>
+            <li>Membuat invoice tagihan</li>
+            <li>Ikut serta dalam mepersiapkan public training dengan Bank DKI</li>
+            <li>Membuat flayer untuk promosi public training</li>
+        </ul>
+        <P><strong>Bendahara| Synreach FTMM 2023 | Juli 2023 - sekarang</strong></P>
+        <ul>
+            <li>Membuat rancangan anggaran biaya</li>
+            <li>Mengatur cashflow</li>
+        </ul>
+
+
+        <h2>Skills</h2>
+        <ul>
+            <li>Microsoft Office</li>
+            <li>R Studio</li>
+            <li>Python</li>
+            <li>SPSS</li>
+            <li>Black Belt Taekwondo</li>
+            <li>Bermain gitar</li>
+            <li>Bermain piano</li>
+        </ul>
+    </div>
+</body>
+
+</html>

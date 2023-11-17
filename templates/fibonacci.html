@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #d88b8b;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgb(246, 127, 48);
+        }
+
+        div {
+            text-align: center;
+            margin: 20px auto;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        span {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: calc(100% - 20px);
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #btnAdd {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #btnAdd:hover {
+            background-color: #0056b3;
+        }
+
+        #fibonacciList {
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+            margin-right: 10px;
+            color: #161515;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/" class="button">Halaman Utama</a>
+        <a href="/profile" class="button">Profile</a>
+        <a href="/cv" class="button">CV</a>
+        <a href="/cat" class="button">My Cats</a>
+        <a href="/artikel" class="button">Article</a>
+        <!-- <a href="/fibonacci" class="button">Fibonacci</a> -->
+        <a href="/csvtojson" class="button">Convert CSV to Json</a>
+        <a href="/post" class="button">POST</a>
+    </div>
+
+    <div>
+        <form id="addForm">
+            <span for="length">Panjang Deret Fibonacci</span>
+            <input type="text" id="length" name="length" required>
+            <br>
+            <input type="button" id="btnAdd" value="Tampilkan Deret Fibonacci" onclick="generateFibonacci()">
+        </form>
+        <div id="fibonacciList"></div>
+    </div>
+
+    <script>
+        function generateFibonacci() {
+            // Get the user input
+            var lengthInput = document.getElementById("length").value;
+
+            // Convert input to a number
+            var length = parseInt(lengthInput);
+
+            // Validate the input
+            if (isNaN(length) || length < 0) {
+                alert("Masukkan panjang deret Fibonacci yang valid.");
+                return;
+            }
+
+            // Generate Fibonacci sequence
+            var fibonacciArray = [0, 1];
+            for (var i = 2; i < length; i++) {
+                fibonacciArray[i] = fibonacciArray[i - 1] + fibonacciArray[i - 2];
+            }
+
+            // Display the sequence
+            displayFibonacci(fibonacciArray);
+        }
+
+        function displayFibonacci(sequence) {
+            var resultDiv = document.getElementById("fibonacciList");
+
+            // Clear previous results
+            resultDiv.innerHTML = "";
+
+            // Create and append an unordered list
+            var ul = document.createElement("ul");
+            for (var i = 0; i < sequence.length; i++) {
+                var li = document.createElement("li");
+                li.textContent = sequence[i];
+                ul.appendChild(li);
+            }
+
+            resultDiv.appendChild(ul);
+        }
+    </script>
+</body>
+
+</html>

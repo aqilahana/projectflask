@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <style>
+        body{
+            background-color: #ffd3d3;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #d88b8b;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: rgb(246, 127, 48);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <a href="/" class="button">Halaman Utama</a>
+        <a href="/profile" class="button">Profile</a>
+        <a href="/cv" class="button">CV</a>
+        <a href="/cat" class="button">My Cats</a>
+        <a href="/artikel" class="button">Article</a>
+        <a href="/fibonacci" class="button">Fibonacci</a>
+        <a href="/csvtojson" class="button">Convert CSV to Json</a>
+        <!-- <a href="/post" class="button">POST</a> -->
+    </div>
+
+    <h1>Form Submission</h1>
+    <form action="#" method="post">
+        <p>Name:</p>
+	    <p><input type="text" name="name" /></p>
+	    <p><input type="submit" value="submit"/></p>
+
+      </form> 
+
+</body>
+</html>
